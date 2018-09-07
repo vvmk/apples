@@ -1,7 +1,5 @@
 <?php
 
-namespace vvmk;
-
 class Order {
     protected $items = [];
     protected $total = 0;
