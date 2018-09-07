@@ -12,8 +12,8 @@ class DiscountTest extends PHPUnit\Framework\TestCase {
         ];
         $price = 30;
 
-        $newItem = new CartItem($fruit, $price);
-        $order = new Order([new Item(['dragonfruits'],25)]);
+        $newItem = new CartItem($fruits, $price);
+        $order = new Order([new CartItem(['dragonfruits'],25)]);
 
         $expected = count($order->items()) + 1;
 
