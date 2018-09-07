@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "psr-4": {
+            "vvmk\\": "src/"
+        }
+    },
+    "require": {
+        "phpunit/phpunit": "^7.3"
+    }
+}
