@@ -64,15 +64,15 @@ Also bear in mind the potential ongoing cost of ops, and any future additional f
 
 ### Architectural considerations
 
-###### Ops things:
+##### Ops things:
 
-Who is going to operate the thing?
-Hosting provider
-Domains
-Email provider
-Support/customer service integration?
-Logging
-Payment processing
+* Who is going to operate the thing?
+* Hosting provider
+* Domains
+* Email provider
+* Support/customer service integration?
+* Logging
+* Payment processing
 
 (the choices made above tend to narrow our options slightly or not slightly)
 
