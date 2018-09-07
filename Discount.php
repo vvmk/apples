@@ -1,5 +1,10 @@
 <?php
 
+/*
+ * Order is just a wrapper around the required 'CartItems' 
+ * parameter. It encapsulates some of the beefier logic
+ * to keep the final solution clean and declarative.
+ */
 class Order {
     protected $items = [];
     public $total; // set to public for test integrity
@@ -43,6 +48,10 @@ class Order {
     }
 }
 
+/*
+ * CartItem represents a 'fruit basket' with only as much 
+ * data as I need to complete the solution: fruits and price.
+ */
 class CartItem {
     
     protected $fruit = [];
@@ -62,6 +71,16 @@ class CartItem {
     }
 }
 
+/*
+ * This implementation assumes that an item which has had its price
+ * discounted can not 'activate' the discount for another item. The 
+ * cart items can be said to act in 'pairs'
+ *
+ * I should point out that, while I believe this is how a similar
+ * situation would be handled in reality, this behavior was not
+ * specified in the instruction document and thus could be
+ * considered open to interpretation :)
+ */
 class Discount {
     public static function applyDiscount($items) {
         $order = new Order($items);
@@ -84,6 +103,6 @@ class Discount {
             }
         }
 
-        return $subtotal - $afterDiscount;
+        return round($subtotal - $afterDiscount, 2);
     }
 }
